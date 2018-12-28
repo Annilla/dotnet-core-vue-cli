@@ -5,12 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - dotnet_core_vue_cli</title>
 
-    <environment include="Development">
-        <!-- 這邊放 Development 的 CSS -->
-        <!-- <link rel="stylesheet" href="~/css/xxx.css" asp-append-version="true"/> -->
-    </environment>
     <environment exclude="Development">
         <!-- 這邊放 Production 的 CSS -->
+        <link rel="stylesheet" href="~/css/main.css" asp-append-version="true" />
     </environment>
 </head>
 <body>
