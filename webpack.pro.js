@@ -1,11 +1,11 @@
-const merge = require('webpack-merge')
+const { merge } = require('webpack-merge')
 const base = require('./webpack.base')
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
+const TerserPlugin = require("terser-webpack-plugin")
 
 module.exports = merge(base, {
   mode: 'production',
-  devtool: '#source-map',
+  devtool: 'source-map',
   optimization: {
-    minimizer: [new UglifyJsPlugin()]
+    minimizer: [new TerserPlugin()]
   }
 })
